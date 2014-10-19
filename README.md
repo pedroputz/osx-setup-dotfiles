@@ -13,3 +13,4 @@ curl --silent https://raw.githubusercontent.com/pedroputz/osx-setup-dotfiles/mas
 
 ## What is inside
 * Homebrew installation with git, node
+* Sublime Text preferences from https://github.com/pedroputz/sublimetext-confs

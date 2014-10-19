@@ -14,7 +14,7 @@ cd ~
 pwd
 echo "${NOCOLOR}"
 
-echo "Homebrew is the first!"
+echo "Homebrew"
 if [[ ! "$(type -P brew)" ]]; then
     echo "- ${GREEN}Installing...${NOCOLOR}"
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -30,4 +30,9 @@ if [[ "$(type -P brew)" ]]; then
     echo "- ${GREEN}Installing Formulas...${NOCOLOR}"
     brew install git node
 fi
+echo ""
+
+echo "Sublime Text Configuration"
+echo "- Cloning pedroputz/sublimetext-confs.git..."
+git clone git@github.com:pedroputz/sublimetext-confs.git ~/Library/Application\ Support/Sublime\ Text\ 3
 echo ""
