@@ -1,33 +1,26 @@
-NOCOLOR=`tput sgr0`
-GREEN=`tput setaf 2`
-LGREEN=`tput bold; tput setaf 2`
-YELLOW=`tput bold; tput setaf 3`
-BLUE=`tput bold; tput setaf 4`
-MAGENTA=`tput bold; tput setaf 5`
+echo ""
+echo "Welcome to the installation process :)"
 
 echo ""
-echo "${GREEN}Welcome to the installation process :)${NOCOLOR}"
-
-echo ""
-echo "${YELLOW}The installer will use this dir: "
+echo "The installer will use this dir: "
 cd ~
 pwd
-echo "${NOCOLOR}"
+echo ""
 
 echo "Homebrew is the first!"
 if [[ ! "$(type -P brew)" ]]; then
-    echo "- ${GREEN}Installing...${NOCOLOR}"
+    echo "- Installing..."
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
-    echo "- ${BLUE}Already installed!${NOCOLOR}"
+    echo "- Already installed!"
 fi
 
 if [[ "$(type -P brew)" ]]; then
-    echo "- ${GREEN}Updating...${NOCOLOR}"
+    echo "- Updating..."
     brew update
-    echo "- ${GREEN}Analyzing...${NOCOLOR}"
+    echo "- Analyzing..."
     brew doctor
-    echo "- ${GREEN}Installing Formulas...${NOCOLOR}"
+    echo "- Installing Formulas..."
     brew install git node
 fi
 echo ""
