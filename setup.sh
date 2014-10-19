@@ -1,5 +1,3 @@
-#! /bin/bash
-
 # colors
 NOCOLOR=`tput sgr0`
 GREEN=`tput setaf 2`
