@@ -39,5 +39,5 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 if [ -f ~/.bash_aliases_local ]; then
-  . ~/.bash_aliases
+  . ~/.bash_aliases_local
 fi
