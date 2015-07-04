@@ -1,19 +1,3 @@
-# default alias
-alias gst="git status"
-alias gpl="git pull origin \$(gitBranch)"
-alias gph="git push origin \$(gitBranch)"
-
-alias ga="git add"
-alias gc="git commit"
-alias gac="git add . && git commit"
-
-alias gco="git checkout"
-alias gbr="git branch"
-alias gdf="git diff"
-
-alias ls="ls -laF"
-
-
 # colors in lists
 export CLICOLOR=1
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
@@ -49,3 +33,11 @@ function gitStatus() {
 
 # command line
 PS1="\n\[$GREEN\]\u\[$NOCOLOR\] \[$MAGENTA\]in\[$NOCOLOR\] \[$BLUE\]\w\[$NOCOLOR\]\[\$(gitStatus)\] \n\[$MAGENTA\]c:\\\>\[$NOCOLOR\] "
+
+if [ -f ~/.bash_aliases ]; then
+  . ~/.bash_aliases
+fi
+
+if [ -f ~/.bash_aliases_local ]; then
+  . ~/.bash_aliases
+fi
