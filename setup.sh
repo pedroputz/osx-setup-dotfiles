@@ -35,7 +35,7 @@ if [[ "$(type -P brew)" ]]; then
     brew doctor
     echo ""
     echo "- ${GREEN}Installing Formulas...${NOCOLOR}"
-    brew install git node
+    brew install git node gpg
 fi
 echo ""
 
@@ -54,6 +54,13 @@ rm -f ~/.gitconfig ~/.bash_profile ~/.bash_aliases
 ln -s .dotfiles/.gitconfig ~/.gitconfig
 ln -s .dotfiles/.bash_profile ~/.bash_profile
 ln -s .dotfiles/.bash_aliases ~/.bash_aliases
+
+echo "${MAGENTA}RVM${NOCOLOR}"
+echo ""
+echo "- ${GREEN}Keyserver${NOCOLOR}"
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+echo "- ${GREEN}installation${NOCOLOR}"
+curl -sSL https://get.rvm.io | bash
 
 echo ""
 echo "${MAGENTA}Sublime Text Configuration${NOCOLOR}"
