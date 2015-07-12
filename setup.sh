@@ -43,7 +43,7 @@ echo "${MAGENTA}Dotfiles${NOCOLOR}"
 echo ""
 echo "- ${GREEN}Cloning pedroputz/osx-setup-dotfiles.git...${NOCOLOR}"
 if [ ! -d "$DOTFILESDIR" ]; then
-    git clone git@github.com:pedroputz/osx-setup-dotfiles.git "$DOTFILESDIR"
+    git clone git@github.com:pedroputz/osx-setup-dotfiles.git $DOTFILESDIR
 else
     cd "$DOTFILESDIR" && git pull && cd ~
 fi
@@ -60,7 +60,7 @@ echo "${MAGENTA}Sublime Text Configuration${NOCOLOR}"
 echo ""
 echo "- ${GREEN}Cloning pedroputz/sublimetext-confs.git...${NOCOLOR}"
 if [ ! -d "$SUBLIMETEXTDIR" ]; then
-    git clone git@github.com:pedroputz/sublimetext-confs.git "$SUBLIMETEXTDIR"
+    git clone git@github.com:pedroputz/sublimetext-confs.git $SUBLIMETEXTDIR
 else
     cd "$SUBLIMETEXTDIR" && git pull && cd ~
 fi
