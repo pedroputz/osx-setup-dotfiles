@@ -1,5 +1,5 @@
 DOTFILESDIR=$HOME"/.dotfiles"
-SUBLIMETEXTDIR=$HOME"/Library/Application\ Support/Sublime\ Text\ 3"
+SUBLIMETEXTDIR=$HOME"/Library/Application Support/Sublime Text 3"
 
 NOCOLOR=`tput sgr0`
 GREEN=`tput setaf 2`
