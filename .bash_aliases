@@ -11,4 +11,4 @@ alias gco="git checkout"
 alias gbr="git branch"
 alias gdf="git diff"
 
-alias ls="ls -laF"
+alias ls="ls -lahF"
