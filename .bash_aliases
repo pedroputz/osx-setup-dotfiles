@@ -12,3 +12,6 @@ alias gbr="git branch"
 alias gdf="git diff"
 
 alias ls="ls -lahF"
+
+alias showhiddenfiles="defaults write com.apple.finder AppleShowAllFiles TRUE"
+alias hidehiddenfiles="defaults write com.apple.finder AppleShowAllFiles FALSE"
