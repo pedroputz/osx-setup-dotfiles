@@ -10,7 +10,6 @@ YELLOW=`tput bold; tput setaf 3`
 BLUE=`tput bold; tput setaf 4`
 MAGENTA=`tput bold; tput setaf 5`
 
-
 function gitBranch() {
   branch=`git branch 2> /dev/null | grep -e ^* | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
 
@@ -22,7 +21,7 @@ function gitBranch() {
 function gitStatus() {
   status=`git status 2> /dev/null | tail -n1`
 
-  if [ "$status" == "nothing to commit, working directory clean" ]; then
+  if [ "$status" == "nothing to commit, working tree clean" ]; then
     echo " ${MAGENTA}on${NOCOLOR} ${LGREEN}$(gitBranch)${NOCOLOR}";
   elif [ "$status" ]; then
     echo " ${MAGENTA}on${NOCOLOR} ${YELLOW}$(gitBranch)*${NOCOLOR}";
@@ -44,3 +43,7 @@ fi
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
