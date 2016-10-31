@@ -35,7 +35,7 @@ if [[ "$(type -P brew)" ]]; then
     brew doctor
     echo ""
     echo "- ${GREEN}Installing Formulas...${NOCOLOR}"
-    brew install git node gpg
+    brew install git nvm gpg
 fi
 echo ""
 
@@ -61,14 +61,3 @@ echo "- ${GREEN}Keyserver${NOCOLOR}"
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 echo "- ${GREEN}installation${NOCOLOR}"
 curl -sSL https://get.rvm.io | bash
-
-echo ""
-echo "${MAGENTA}Sublime Text Configuration${NOCOLOR}"
-echo ""
-echo "- ${GREEN}Cloning pedroputz/sublimetext-confs.git...${NOCOLOR}"
-if [ ! -d "$SUBLIMETEXTDIR" ]; then
-    git clone git@github.com:pedroputz/sublimetext-confs.git "$SUBLIMETEXTDIR"
-else
-    cd "$SUBLIMETEXTDIR" && git pull && cd ~
-fi
-echo ""
