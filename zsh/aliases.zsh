@@ -1,10 +1,10 @@
-# default alias
-alias gst="git status"
-alias gpl="git pull origin \$(gitBranch)"
+# default aliases
+alias gph="git push origin \$(git_current_branch)"
+alias gphf="git push -f origin \$(git_current_branch)"
+alias gphnv="git push --no-verify origin \$(git_current_branch)"
+alias gpl="git pull origin \$(git_current_branch)"
 alias gplom="git pull origin master"
-alias gph="git push origin \$(gitBranch)"
-alias gphf="git push -f origin \$(gitBranch)"
-alias gphnv="git push --no-verify origin \$(gitBranch)"
+alias gst="git status"
 
 alias ga="git add"
 alias gc="git commit"

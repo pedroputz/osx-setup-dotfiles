@@ -20,7 +20,7 @@ echo "${MAGENTA}Homebrew${NOCOLOR}"
 echo ""
 if [[ ! "$(type -P brew)" ]]; then
     echo "- ${GREEN}Installing...${NOCOLOR}"
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 else
     echo "- ${BLUE}Already installed!${NOCOLOR}"
 fi
@@ -34,7 +34,7 @@ if [[ "$(type -P brew)" ]]; then
     brew doctor
     echo ""
     echo "- ${GREEN}Installing Formulas...${NOCOLOR}"
-    brew install git nvm yarn
+    brew install zsh git nvm yarn
 fi
 echo ""
 
@@ -47,9 +47,12 @@ else
     cd "$DOTFILESDIR" && git pull && cd ~
 fi
 
+echo "${MAGENTA}Oh My ZSH${NOCOLOR}"
 echo ""
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+echo ""
+
 echo "- ${GREEN}Making links${NOCOLOR}"
-rm -f ~/.gitconfig ~/.bash_profile ~/.bash_aliases
+rm -f ~/.gitconfig ~/.zshrc
 ln -s .dotfiles/.gitconfig ~/.gitconfig
-ln -s .dotfiles/.bash_profile ~/.bash_profile
-ln -s .dotfiles/.bash_aliases ~/.bash_aliases
+ln -s .dotfiles/.zshrc ~/.zshrc
