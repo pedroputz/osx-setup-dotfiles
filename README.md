@@ -1,16 +1,18 @@
-osx-setup-prefs
-===============
+# osx-setup-prefs
 
 My system setup and dotfiles.
 
 ## Dependencies
-* Xcode and its Command Line Tools
+
+- Xcode and its Command Line Tools
 
 ## Instalation
+
 ```
 curl --silent https://raw.githubusercontent.com/pedroputz/osx-setup-dotfiles/master/setup.sh | sh
 ```
 
 ## What is inside
-* Homebrew installation with git, nvm, yarn
-* Dotfiles e symlinks
+
+- Homebrew installation with git, nvm, yarn
+- Dotfiles and symlinks

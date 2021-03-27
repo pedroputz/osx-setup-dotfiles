@@ -9,3 +9,7 @@ ZSH_THEME="putz"
 ZSH_CUSTOM=~/.dotfiles/zsh
 
 source $ZSH/oh-my-zsh.sh
+
+# NVM
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh

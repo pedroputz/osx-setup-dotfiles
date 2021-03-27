@@ -1,1 +1,1 @@
-# local aliases
+/Volumes/work/aliases-local.zsh

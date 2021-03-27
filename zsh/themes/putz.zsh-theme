@@ -1,4 +1,3 @@
-# PROMPT="\n\[$GREEN\]\u\[$NOCOLOR\] \[$MAGENTA\]in\[$NOCOLOR\] \[$BLUE\]\w\[$NOCOLOR\]\[\$(gitStatus)\] \n\[$MAGENTA\]c:\\\>\[$NOCOLOR\] "
 NEWLINE=$'\n'
 
 PROMPT="${NEWLINE}"
