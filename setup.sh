@@ -33,8 +33,12 @@ if [[ "$(type -P brew)" ]]; then
     echo "- ${GREEN}Analyzing...${NOCOLOR}"
     brew doctor
     echo ""
+    echo "- ${GREEN}Adding repos (tap)...${NOCOLOR}"
+    brew tap homebrew/cask-fonts
+    echo ""
     echo "- ${GREEN}Installing Formulas...${NOCOLOR}"
-    brew install zsh git nvm yarn
+    brew install zsh git nvm
+    brew install --cask font-victor-mono rectangle iterm2 postman google-chrome
 fi
 echo ""
 
