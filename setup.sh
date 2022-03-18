@@ -20,7 +20,7 @@ echo "${MAGENTA}Homebrew${NOCOLOR}"
 echo ""
 if [[ ! "$(type -P brew)" ]]; then
     echo "- ${GREEN}Installing...${NOCOLOR}"
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
     echo "- ${BLUE}Already installed!${NOCOLOR}"
 fi
