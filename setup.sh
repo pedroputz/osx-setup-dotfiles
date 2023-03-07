@@ -38,7 +38,7 @@ if [[ "$(type -P brew)" ]]; then
     echo ""
     echo "- ${GREEN}Installing Formulas...${NOCOLOR}"
     brew install zsh git nvm
-    brew install --cask font-victor-mono rectangle iterm2 postman google-chrome
+    brew install --cask font-victor-mono iterm2 postman google-chrome
 fi
 echo ""
 
